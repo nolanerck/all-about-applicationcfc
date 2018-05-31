@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>All About Application.CFC</title>
+		<title>All About Application.cfc</title>
 		<link rel="stylesheet" href="../Reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="../Reveal.js/css/theme/moon.css" id="theme">
 		<style>
@@ -72,35 +72,42 @@
 				</section>
 
 				<section>
-					<h2>Today's Agenda</h2>
-					<ul>
-						<li>What is Font Awesome?</li>
-						<li>How do I install it?</li>
-						<li>Simple example of how to start using it?</li>
-						<li>Treating icons like fonts - sizes and colors, styles</li>
-						<li>Bordered, spinning and rotated icons</li>
-						<li>Masking icons and other tricks</li>
-						<li>Pros and cons</li>
-					</ul>
-				</section>
-
-				<section>
 					<h2>Code And Slides</h2>
 					<p class="centered">github.com/nolanerck</p>
 					<p class="centered">all-about-applicationcfc</p>
 				</section>
 
 				<section>
-					<h2>Other Info</h2>
+					<h2>What’s Application.cfc</h2>
 					<ul>
-						<li>FontAwesome.com "Help"</li>
-						<li>blog.fontawesome.com</li>
-						<li>StackOverflow Forum</li>
-						<li>entypo.com
-							<ul>
-								<li>More "stylish" alternative? Not updated since 2015</li>
-							</ul>
+						<li>The "new" Application.cfm</li>
+						<li>Runs before and after various things in the app</li>
+						<li>Better control over the application</li>
+						<li>Event lifecycle hooks</li>
+						<li>New functionality</li>
+						<li>Encourage modern OOP/event-based thinking</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Problems With Application.cfm</h2>
+					<ul>
+						<li>Old technology</li>
+						<li><em>Whole</em> file runs on <em>every</em> request</li>
+						<li>Slow, unnecessary extra code</li>
+						<li>Fewer options for security and debug opportunities
+							<br>-Logging when sessions start/stop, etc
 						</li>
+						<li>Not doing yourself any favors.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Other Resources</h2>
+					<ul>
+						<li>cfdocs.org</li>
+						<li>learncfinaweek.com</li>
+						<li>raymondcamden.com</li>
 					</ul>
 				</section>				
 
