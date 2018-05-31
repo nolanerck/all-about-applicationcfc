@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>All About Application.CFC</title>
+
+		<link rel="stylesheet" href="../Reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../Reveal.js/css/theme/moon.css" id="theme">
+		<style>
+			.reveal h2
+			{ 
+				text-transform: none; 
+				font-size: 60px;
+			}
+
+			.reveal ul li, .reveal p
+			{
+				font-size: 34px;
+				text-align: left;
+			}
+
+			.highlight 
+			{ 
+				color: green 
+			}
+
+			.code
+			{
+				font-family: "Courier";
+				color: green;
+			}
+
+			.reveal p.centered
+			{
+				text-align: center;
+			}
+
+			.reveal ul.remove-dot
+			{
+				list-style-type: none;
+			}
+		</style>		
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+
+				<section>
+					<h2>All About Application.cfc</h2>
+					<p class="centered">Nolan Erck</p>
+					<p class="centered">South of Shasta Consulting</p>
+				</section>
+
+				<section>
+					<h2>About Me</h2>
+					<ul>
+						<li>Software Consultant (southofshasta.com)
+							<ul>
+								<li>Software Development, Training, Design</li>
+							</ul>
+						</li>
+
+						<li>ColdFusion, C++, Java, jQuery, PHP, .NET, HTML5, Android, SQL, etc...</li>
+						<li>Manager, SacInteractive User Group</li>
+						<li>Reformed Video Game Developer (Grim Fandango, SimPark, StarWars Rogue Squadron, etc).</li>
+						<li>Music Junkie</li>
+					</ul>
+				</section>
+
+				<section data-background-image="./images/cd_shelf.png">
+				</section>
+
+				<section data-background-image="./images/vinyl_shelf.png">
+				</section>
+
+				<section data-background-image="./images/charlie_brown.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<h2>Today's Agenda</h2>
+					<ul>
+						<li>What is Font Awesome?</li>
+						<li>How do I install it?</li>
+						<li>Simple example of how to start using it?</li>
+						<li>Treating icons like fonts - sizes and colors, styles</li>
+						<li>Bordered, spinning and rotated icons</li>
+						<li>Masking icons and other tricks</li>
+						<li>Pros and cons</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Code And Slides</h2>
+					<p class="centered">github.com/nolanerck</p>
+					<p class="centered">font-awesome-preso</p>
+				</section>
+
+				<section>
+					<h2>So what is FontAwesome?</h2>
+				</section>
+
+				<section>
+					<h2>So what is FontAwesome?</h2>
+					<p class="centered">Building web apps = making icons
+						<br />
+						...LOTS of icons!
+					</p>
+					<img src="./images/lots-of-icons.png" />
+				</section>
+
+				<section>
+					<h2>Icons in different sizes...</h2>
+					<img src="./images/lots-of-icons2.png" />
+				</section>
+
+				<section>
+					<p class="centered">And colors...</p>
+					<p class="centered">Orientations...</p>
+					<p class="centered">And hover states...</p>
+					<p class="centered">With borders...</p>
+					<p class="centered">And shadows...</p>
+				</section>
+
+				<section>
+					<p class="centered">1 icon could = 10+ images.</p>
+					<p class="centered">How many icons in 1 webapp?</p>
+					<p class="centered">What if a color changes in the design?</p>
+					<p class="centered">Does the site have seasonal color changes?</p>
+					<p class="centered">= LOTS of repetitive work!</p>
+				</section>
+
+				<section>
+					<h2>Enter Font Awesome!</h2>
+					<ul>
+						<li>No JPGs, No PNGs, No GIFs.</li>
+						<li>No static (non-flexible) images of any kind!</li>
+						<li>Font Awesome is a “font” that gives you icons.
+							<ul>
+								<li>“Someone finally found a use for the WingDings font!”<br />...kind of. :)</li>
+							</ul>
+						</li>
+						<li>Use CSS to alter typefaces in your HTML</li>
+							<ul>
+								<li>(size, color, borders, etc)</li>
+							</ul>
+						<li>Same idea, same concept.</li>
+						<li>Free and Pro versions available</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>How do I install Font Awesome?</h2>
+					<ul>
+						<li>Go to fontawesome.com</li>
+						<li>Click download.</li>
+						<li>Unzip that folder and stick it on your website.</li>
+					</ul>
+<pre class="code">
+&lt;script src="/fontawesome/fontawesome-all.js"&gt;&lt;/script&gt;
+</pre>
+				</section>
+
+				<section>
+					<h2>How do I install Font Awesome?</h2>
+					<p class="centered">Can also just use their CDN:</p>
+<pre class="code">
+&lt;script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"&gt;&lt;/script&gt;
+</pre>
+				</section>
+
+				<section>
+					<h2>Using Font Awesome</h2>
+					<p>Just use the &lt;i&gt; HTML tag wherever you want an icon:</p>
+<pre class="code">
+&lt;i class="fas fa-camera-retro"&gt;&lt;/i&gt;
+</pre>
+					<p>"fas" is the default style, "fa-camera-retro" is the icon itself</p>
+				</section>
+
+				<section>
+					<h2>Using Font Awesome</h2>
+					<p>Four styles available:<br />Solid (fas), Regular (far), Light (fal), Brands (fab)</p>
+					<p>Regular and Light are only in the Pro version</p>
+					<img src="./images/styles-chart.png" />
+				</section>
+
+				<section>
+					<h2>Example #1</h2>
+<pre class="code">
+&lt;i class="fas fa-camera-retro"&gt;&lt;/i&gt;
+</pre>
+
+					<div class="centered">
+						<i class="fas fa-camera-retro"></i>
+					</div>
+
+					<div class="centered">
+						<a href="../CodeDemos/1_HelloWorld.html">Demo</a>
+					</div>
+				</section>
+
+				<section>
+					<h2>Icon Sizes</h2>
+<div class="centered">
+<pre class="code">
+&lt;i class="fas fa-camera-retro fa-sm"&gt;&lt;/i&gt;
+&lt;i class="fas fa-camera-retro fa-lg"&gt;&lt;/i&gt;
+&lt;i class="fas fa-camera-retro fa-2x"&gt;&lt;/i&gt;
+</pre>
+</div>
+
+<div class="centered">
+	<i class="fas fa-camera-retro fa-sm"></i>
+	<i class="fas fa-camera-retro fa-lg"></i>
+	<i class="fas fa-camera-retro fa-2x"></i>
+</div>
+
+<img src="./images/size-chart.png" alt="Size Chart">
+
+					<div class="centered">
+						<a href="../CodeDemos/2_IconSizes.html">Demo</a>
+					</div>
+				</section>
+
+				<section>
+					<h2>Change Color</h2>
+<pre class="code">
+&lt;style&gt;
+	#emergency
+	{
+		color: red;
+	}
+&lt;/style&gt;
+&lt;div id="emergency"&gt;
+	&lt;i class="fas fa-address-book"&gt;&lt;/i&gt;
+&lt;/div&gt;
+</pre>
+
+<style>
+	#emergency
+	{
+		color: red;
+	}
+</style>
+<div id="emergency">
+	<i class="fas fa-address-book"></i>
+</div>
+
+					<div class="centered">
+						<a href="../CodeDemos/3_ChangeColors.html">Demo</a>
+					</div>
+
+				</section>
+
+				<section>
+					<h2>Fixed Width Icons</h2>
+<pre class="code">
+	&lt;div&gt;&lt;i class="fas fa-home fa-fw"&gt;&lt;/i&gt;
+		Les Claypool
+	&lt;/div&gt;
+	&lt;div&gt;&lt;i class="fas fa-info fa-fw"&gt;&lt;/i&gt; Larry Lalonde&lt;/div&gt;
+	&lt;div&gt;&lt;i class="fas fa-book fa-fw"&gt;&lt;/i&gt; Tim Alexander&lt;/div&gt;
+</pre>
+
+<pre>
+	<div><i class="fas fa-home fa-fw"></i> Home</div>
+	<div><i class="fas fa-info fa-fw"></i> Info</div>
+	<div><i class="fas fa-book fa-fw"></i> Library</div>
+</pre>
+
+					<div class="centered">
+						<a href="../CodeDemos/4_FixedWidth.html">Demo</a>
+					</div>
+
+				</section>
+
+				<section>
+					<h2>Rotate Icons</h2>
+<pre class="code">
+&lt;i class="fab fa-apple" data-fa-transform="rotate-90"&gt;&lt;/i&gt;
+</pre>
+					<i class="fab fa-apple" data-fa-transform="rotate-90"></i>
+
+<pre class="code">
+&lt;i class="fab fa-apple" data-fa-transform="rotate-111"&gt;&lt;/i&gt;
+</pre>
+					<i class="fab fa-apple" data-fa-transform="rotate-111"></i>
+
+<pre class="code">
+&lt;i class="fab fa-apple" data-fa-transform="rotate-180"&gt;&lt;/i&gt;
+</pre>
+					<i class="fab fa-apple" data-fa-transform="rotate-180"></i>
+
+					<div class="centered">
+						<a href="../CodeDemos/5_RotateIcons.html">Demo</a>
+					</div>					
+				</section>
+
+				<section>
+					<h2>Masking Icons</h2>
+
+					<i class="fas fa-pencil-alt fa-4x"></i>
+					<i class="fas fa-comment fa-4x"></i>
+					<i class="fas fa-pencil-alt fa-4x" data-fa-mask="fas fa-comment"></i>
+
+<pre class="code">
+&lt;i class="fas fa-pencil-alt fa-4x"&gt;&lt;/i&gt;
+&lt;i class="fas fa-comment fa-4x"&gt;&lt;/i&gt;
+&lt;i class="fas fa-pencil-alt fa-4x" data-fa-mask="fas fa-comment"&gt;&lt;/i&gt;
+</pre>
+
+					<div class="centered">
+						<a href="../CodeDemos/6_MaskingIcons.html">Demo</a>
+					</div>
+
+				</section>
+
+				<section>
+					<h2>List Icons</h2>
+					<ul class="fa-ul remove-dot">
+						<li><span class="fa-li"><i class="fas fa-check-square"></i></span>Depeche Mode</li>
+						<li><span class="fa-li"><i class="fas fa-check-square"></i></span>David Bowie</li>
+						<li><span class="fa-li"><i class="fas fa-check-square"></i></span>Green Day</li>
+						<li><span class="fa-li"><i class="fas fa-check-square"></i></span>7 Seconds</li>
+					</ul>
+<pre class="code">
+&lt;ul class="fa-ul"&gt;
+	&lt;li&gt;&lt;span class="fa-li"&gt;
+		&lt;i class="fas fa-check-square"&gt;&lt;/i&gt;&lt;/span&gt;
+		Depeche Mode
+	&lt;/li&gt;
+&lt&lt;/ul&gt;
+</pre>
+					<div class="centered">
+						<a href="../CodeDemos/7_ListIcons.html">Demo</a>
+					</div>
+				</section>
+
+				<section>
+					<h2>Animated Icons</h2>
+  					<i class="fab fa-apple fa-3x fa-spin"></i>
+<pre class="code">
+&lt;i class="fab fa-apple fa-3x fa-spin"&gt;&lt;/i&gt;
+</pre>
+
+  					<i class="fab fa-apple fa-3x fa-pulse"></i>
+<pre class="code">
+&lt;i class="fab fa-apple fa-3x fa-pulse"&gt;&lt;/i&gt;
+</pre>
+					<div class="centered">
+						<a href="../CodeDemos/8_Animations.html">Demo</a>
+					</div>
+				</section>
+
+				<section>
+					<h2>Combining Things</h2>
+					<style>
+						#combining-things
+						{
+							color: white;
+							font-size: 115px;
+						}
+					</style>
+
+					<i id="combining-things" 
+					   data-fa-transform="shrink-3.5 down-1.6 right-1.25" 
+					   class="fab fa-angular" 
+					   data-fa-mask="fab fa-angular"></i>
+
+					<i id="combining-things" 
+					   data-fa-transform="shrink-3.5 down-1.6 right-1.25" 
+					   class="fab fa-angular fa-spin" 
+					   data-fa-mask="fab fa-angular"></i>
+<!-- <pre class="code">
+&lt;style&gt;
+	#combining-things
+	{
+		color: white;
+		font-size: 115px;
+	}
+&lt;/style&gt;
+
+&lt;i id="combining-things" 
+   data-fa-transform="shrink-3.5 down-1.6 right-1.25" 
+   class="fab fa-angular" 
+   data-fa-mask="fab fa-angular"&gt;&lt;/i&gt;
+
+&lt;i id="combining-things" 
+   data-fa-transform="shrink-3.5 down-1.6 right-1.25" 
+   class="fab fa-angular fa-spin" 
+   data-fa-mask="fab fa-angular"&gt;&lt;/i&gt;
+</pre> -->
+					<div class="centered">
+						<a href="../CodeDemos/9_Combinations.html">Demo</a>
+					</div>
+				</section>
+
+				<section>
+					<h2>Bootstrap Support</h2>
+					<ul>
+						<li>Yes!</li>
+						<li>No trickery</li>
+						<li>Just include your Bootstrap assets like normal and start coding</li>
+						<li>Font Awesome is designed to work with Bootstrap</li>
+					</ul>
+
+					<div class="centered">
+						<a href="../CodeDemos/10_Boostrap.html">Demo 1</a>
+						<a href="../CodeDemos/11_Bootstrap2.html">Demo 2</a>
+					</div>
+
+				</section>
+
+				<section>
+					<h2>So What's the Catch?</h2>
+					<ul>
+						<li>30MB download</li>
+						<li>Some extra overhead in your site.<br />fontawesome-all.js is 700K by itself</li>
+						<li>Pro version is subscription based</li>
+						<li>Styling the I or parent DIV to customize</li>
+						<li>Rare CSS quirks<br />had to use in-line CSS to customize some things</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Performance?</h2>
+					<ul>
+						<li>Really good</li>
+						<li>Docs say up to 1000 icons per page with no noticable lags</li>
+						<li>After that, not sure</li>
+						<li>When would you ever really <em>need</em> more than 1000 icons per page?</li>
+						<li>Large scale tile based games?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Performance?</h2>
+					<ul>
+						<li>&lt;html class="fontawesome-i2svg-pending"&gt;</li>
+						<li>When icons are loaded <span class="code">fontawesome-i2svg-active</span> will be added</li>
+						<li>Can write JS to do "loading..." animation, etc</li>
+						<li>Or hide the body until everything loads:</li>
+					</ul>
+					<img src="./images/pending-css-example.png" />
+				</section>
+
+				<section>
+					<h2>Browser Support</h2>
+					<img src="./images/browser-support.png" />
+				</section>
+
+				<section>
+					<h2>Taking It Further</h2>
+					<ul>
+						<li>This is all just CSS</li>
+						<li>Can use it in SASS, LESS, jQuery, Vanilla JavaScript, etc</li>
+						<li>All the CSS knowledge you already have still works</li>
+						<li>All the JavaScript tricks you currently use still work too</li>
+						<li>Works in Bootstrap, Angular, Vue.js, etc</li>
+						<li>Remember: the browser just sees a font and CSS</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>But Wait, There's More!</h2>
+					<ul>
+						<li>Node API for server side rendering</li>
+						<li>Vue.js Component Package</li>
+						<li>React Component Package</li>
+						<li>Compoents for Ember.js and Angular are planned but not done yet</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Using Font Awesome in a Real World App</h2>
+					<ul>
+						<li>MuraCMS</li>
+						<li>Free, open source CMS engine</li>
+						<li>By Blue River in Sacramento</li>
+						<li>Built sites for Apple, Intuit, Amtrak, State of California, etc</li>
+						<li>The Mura Admin tools use Font Awesome all over the place</li>
+						<li>getmura.com</li>
+						<li>MuraCon 2018 in April (lots of Docker and Digital Markeitng content!)</li>
+						<li>Demo - southofshasta.com</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Other Info</h2>
+					<ul>
+						<li>FontAwesome.com "Help"</li>
+						<li>blog.fontawesome.com</li>
+						<li>StackOverflow Forum</li>
+						<li>entypo.com
+							<ul>
+								<li>More "stylish" alternative? Not updated since 2015</li>
+							</ul>
+						</li>
+					</ul>
+				</section>				
+
+				<section>
+					<h2>Questions? Comments?<br />Need Help With a Project?</h2>
+					<ul>
+						<li>southofshasta.com</li>
+						<li>nolan@southofshasta.com</li>
+						<li>Twitter: @southofshasta</li>
+						<li>Github: nolanerck</li>
+					</ul>
+					<p class="centered">Thanks!</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="../Reveal.js/js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize();
+		</script>
+
+		<script defer src="../fontawesome/on-server/js/fontawesome-all.js"></script>
+
+	</body>
+</html>
