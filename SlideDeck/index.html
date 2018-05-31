@@ -153,7 +153,108 @@
 				</section>
 
 				<section>
+					<h2>Event Methods</h2>
+					<ul>
+						<li>There are several different ones</li>
+						<li>Don't have to use them all</li>
+						<li>Use whichever ones make sense for your app</li>
+					</ul>
+				</section>
+
+				<section>
 					<h2>OnRequestStart()</h2>
+					<ul>
+						<li>Runs <em>before</em> the page request begins</li>
+						<li>Receives the template <em>name</em> as an argument</li>
+						<li>Can set variables that need to exist before the page renders</li>
+						<li>Validate users trying to access the page</li>
+						<li>5_OnRequestStart</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>OnRequest()</h2>
+					<ul>
+						<li>Like OnRequestStart()</li>
+						<li>But gets passed the <em>actual</em> template</li>
+						<li>Can include the template for regular rendering</li>
+						<li>Or swap out for other content</li>
+						<li>6_OnRequest</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>OnRequestEnd()</h2>
+					<ul>
+						<li>Runs after the template has been rendered</li>
+						<li>Useful for logging</li>
+						<li>Not for "footer" stuff</li>
+						<li>The request has <em>already</em> ended</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>OnApplicationStart()</h2>
+					<ul>
+						<li>First chunk of code in your app to run</li>
+						<li>Thread-safe</li>
+						<li>The <em>proper</em> place to put your "application." variables</li>
+						<li>Does <em>not</em> run on every page request ala old Application.cfm files</li>
+						<li>Runs once, when the app starts</li>
+						<li>Can be faster than your Application.cfm file</li>
+						<li>5_OnRequestStart again</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>onApplicationEnd()</h2>
+					<ul>
+						<li>Runs <em>after</em> your application has timed out</li>
+						<li>Useful for logging</li>
+						<li>Not for "logged out, goodbye" messages</li>
+						<li>The app has <em>already</em> timed out</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>onSessionStart()</h2>
+					<ul>
+						<li>A new user just began visiting the site</li>
+						<li>Inspect the CGI scope, see if it's a bot, hacker, etc</li>
+						<li>Keep a count of how many live users are on the site right now</li>
+					</ul>					
+				</section>
+
+				<section>
+					<h2>onSessionEnd()</h2>
+					<ul>
+						<li>Runs <em>after</em> your sesison has timed out</li>
+						<li>Not for "please click something to stay logged in" messages</li>
+						<li>The session has <em>already</em> timed out</li>
+						<li>Useful for logging</li>
+						<li>Deduct 1 user from the "currently logged in" count via onSessionStart()</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>onError()</h2>
+					<ul>
+						<li>Error handling ala "cferror" tag</li>
+						<li>Works very similarly</li>
+						<li>Custom error handling</li>
+						<li>Customer friendly messages for the Production server</li>
+						<li>Hook in reporting tools like BugLogHQ</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Mulitple Application.cfc Files</h2>
+					<ul>
+						<li>Use ApplicationProxy to extend</li>
+						<li>Can refine what happens in each folder/sub-app</li>
+						<li>Useful for folder-specific permission checking</li>
+						<li>8_Multiple</li>
+					</ul>
 				</section>
 
 				<section>
