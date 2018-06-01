@@ -1,5 +1,7 @@
 <cfcomponent>
 
+	<!--- <cfapplication name="" sessionmanagement="" clientmanagement="" /> --->
+
 	<cfset this.name = "VandelayIndustries_Webapp" />
 	<cfset this.loginStorage 		= "session" />
 	<cfset this.sessionManagement 	= true />

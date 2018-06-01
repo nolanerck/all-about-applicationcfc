@@ -14,4 +14,6 @@
 
 	<cfset this.customtagpaths = ExpandPath( "/CustomTags" ) />
 
+	<!--- <cfinclude template="/appwebroot/filename.cfm" /> --->
+
 </cfcomponent>

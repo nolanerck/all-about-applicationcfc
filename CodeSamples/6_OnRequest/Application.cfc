@@ -13,7 +13,13 @@
 			<cfinclude template="accessdenied.cfm">
 		</cfif>
 
-		<cfinclude template="#arguments.targetPage#" />
+		<cfset var myTemplate = arguments.targetPage />
+
+		<cfset GDPRMessage = "this site uses cookies..." />
+
+		<cfset myTemplate = GDPRMessage & myTemplate />
+
+		<cfinclude template="#myTemplate#" />
 
 		<cfreturn true />
 	</cffunction>
